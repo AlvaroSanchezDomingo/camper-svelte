@@ -11,28 +11,22 @@ export const welcomeBar = [
 
 export let adminBar = [
   {
-    title: "Parkings",
-    icon: "fas fa-parking fa-3x",
-    colour: "color:rgb(63, 122, 139)",
-    link: "/#/parkings",
+    title: "Add user",
+    icon: "fas fa-plus-circle fa-3x",
+    colour: "color:rgb(153, 196, 74)",
+    link: "/#/signup",
   },
   {
     title: "Show users",
     icon: "fas fa-users fa-3x",
-    colour: "color:rgb(153, 196, 74)",
+    colour: "color:rgb(200, 68, 100)",
     link: "/#/users",
   },
   {
-    title: "Settings",
-    icon: "fas fa-id-card fa-3x",
-    colour: "color:rgb(14, 168, 160)",
-    link: "/#/settings",
-  },
-  {
-    title: "Sign Up",
-    icon: "fas fa-user-cog fa-3x",
-    colour: "color:rgb(182, 89, 89)",
-    link: "/#/signup",
+    title: "Parkings",
+    icon: "fas fa-parking fa-3x",
+    colour: "color:rgb(63, 122, 139)",
+    link: "/#/parkings",
   },
   {
     title: "Logout",
@@ -48,7 +42,7 @@ export let userBar = [
     title: "Add parking",
     icon: "fas fa-plus-circle fa-3x",
     colour: "color:rgb(153, 196, 74)",
-    link: "/#/addparkings",
+    link: "/#/parkingsadd",
   },
   {
     title: "Parkings",

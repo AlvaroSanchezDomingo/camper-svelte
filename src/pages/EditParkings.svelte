@@ -1,12 +1,12 @@
 <script>
-  import { adminBar, navBar, subTitle, title,} from "../stores";
-  import SettingsForm from "../components/SettingsForm.svelte";
+  import { userBar, navBar, subTitle, title,} from "../stores";
+  import ParkingForm from "../components/ParkingForm.svelte";
 
   title.set("Donation Services Inc");
-  subTitle.set("Edits and then save your settings");
+  subTitle.set("Edit parking");
 
   navBar.set({
-    bar: adminBar
+    bar: userBar
   });
   export let params = {}
 
@@ -17,7 +17,8 @@
   <div class="uk-width-1-2@m">
     <div class="uk-card uk-card-default uk-card-body uk-box-shadow-large uk-width-2xlarge">
       <h3 class="uk-card-title uk-text-center">Edit any entry and press save</h3>
-      <SettingsForm id={params.id}/>
+      <ParkingForm id={params.id}/>
     </div>
   </div>
 </div>
+

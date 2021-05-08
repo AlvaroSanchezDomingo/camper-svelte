@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import { push } from "svelte-spa-router";
   import { getContext } from "svelte";
 
@@ -17,7 +17,7 @@
     let success = await service.createUser(user)
     
     if (success) {
-      push("/signup");
+      push("/users");
     } else {
       errorMessage = "Error Trying to sign up";
     }

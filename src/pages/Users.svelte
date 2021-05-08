@@ -11,14 +11,17 @@
   navBar.set({
     bar: adminBar
   });
+  
+  async function refresh() {
+    users = await service.getUsers()
+  }  
+
   onMount(async () => {
-		users = await service.getUsers()
+		refresh()
 	});
 
 </script>
-
-
 {#each users as user}
-    <User user={user}/>
+    <User user={user} on:refresh={refresh}/>
 {/each}
 

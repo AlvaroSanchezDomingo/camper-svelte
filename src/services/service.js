@@ -57,21 +57,14 @@ export class Service {
       return null;
     }
   }
-  async updateSettings(firstName, lastName, email, password, level, id) {
+  async updateSettings(user) {
     try {
-      const userDetails = {
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
-        password: password,
-        level: level,
-        _id: id
-      };
-      console.log(userDetails);
-      const response = await axios.put(`${this.baseUrl}/api/users/${id}`, userDetails);
-      const newUser = await response.data;
-      user.set(newUser);
-      return true;
+      const response = await axios.put(`${this.baseUrl}/api/users/${user._id}`, user);
+      const updatedUser = await response.data;
+      if (updatedUser){
+        return true;
+      }
+      return false;
     } catch (error) {
       return false;
     }
