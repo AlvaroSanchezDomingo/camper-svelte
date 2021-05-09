@@ -1,5 +1,6 @@
 <script>
     import {getContext, createEventDispatcher} from "svelte";
+    import {user} from "../stores"
     const service = getContext("Service");
     let message
     export let parking;
@@ -19,16 +20,14 @@
         <div class="uk-card-header">
             <div class="uk-grid-small uk-flex-middle" uk-grid>
                 <div class="uk-width-auto">
-                    {#if parking.category == "Nature"}
+                    {#if parking.category === 'Nature'}
                         <i class="fas fa-tree fa-2x" style="color:rgb(49,78,0)"></i>
-                    {:else if parking.category == "Public"}
+                    {:else if parking.category === 'Public'}
                         <i class="fas fa-parking fa-2x" style="color:rgb(21,57,177)"></i>
-                    {:else if parking.category == "Private"}
+                    {:else if parking.category === 'Private'}
                         <i class="fas fa-parking fa-2x" style="color:rgb(177,21,21)"></i>
-                    {:else if parking.category == "Camping"}
+                    {:else if parking.category === 'Camping'}
                         <i class="fas fa-campground fa-2x" style="color:rgb(217,238,33)"></i>
-                    {:else}
-                        <p class="uk-text-meta uk-margin-remove-top">No ve el icono</p>
                     {/if}
                     <p class="uk-text-meta uk-margin-remove-top">{parking.category}</p>
                 </div>
@@ -49,9 +48,11 @@
 
         <div class="uk-card-footer">
             <p uk-margin>
-                <a href="/#/parking/{parking._id}" class="uk-button uk-button-primary uk-button-small" uk-icon="sign-in"></a>
+                <a href="/#/parkings/{parking._id}" class="uk-button uk-button-primary uk-button-small" uk-icon="sign-in"></a>
+                {#if user.level >0 }
                 <a href="/#/parkingedit/{parking._id}" class="uk-button uk-button-secondary uk-button-small" uk-icon="file-edit"></a>
                 <button on:click={deleteParking} class="uk-button uk-button-danger uk-button-small" uk-icon="trash"></button>
+                {/if}
                 {#if message}
                     <div class="uk-text-left uk-text-small">
                         {message}

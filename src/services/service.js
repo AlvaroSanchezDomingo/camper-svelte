@@ -142,6 +142,22 @@ export class Service {
       return null;
     }
   }
+  async getTemperatureLocation(lat, long) {
+    try {
+      const apiKey = "S84DhNhKFuebGRZMU1FN8z0Ir9vwdzGj"
+      let weather = {};
+      let temp
+      const weatherRequest = `https://data.climacell.co/v4/timelines?location=${lat},${long}&fields=temperature&units=metric&apikey=${apiKey}`;
+      const response = await axios.get(weatherRequest)
+      if (response.status == 200) {
+        weather = response.data
+        temp = weather.data.timelines[0].intervals[0].values.temperature
+      }
+      return temp;
+    } catch (e) {
+      return null;
+    }
+  }
   async deleteAllParkings() {
     try {
       const response = await axios.delete(this.baseUrl + "/api/parkings");

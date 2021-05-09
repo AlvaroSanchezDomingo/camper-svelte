@@ -7,7 +7,7 @@
   import Parkings from "./pages/Parkings.svelte";
   import ViewParkings from "./pages/ViewParkings.svelte";
   import AddParking from "./pages/AddParking.svelte";
-  import EditParkings from "./pages/ViewParkings.svelte";
+  import EditParkings from "./pages/EditParkings.svelte";
   import Users from "./pages/Users.svelte";
   import Settings from "./pages/Settings.svelte";
   import Navigator from "./components/Navigator.svelte";
@@ -21,7 +21,7 @@
     "/signup" : Signup,
     "/parkings": Parkings,
     "/parkings/:id": ViewParkings,
-    "/parkingsedit/:id": EditParkings,
+    "/parkingedit/:id": EditParkings,
     "/parkingsadd": AddParking,
     "/users": Users,
     "/settings/:id" : Settings,

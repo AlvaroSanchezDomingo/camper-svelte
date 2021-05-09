@@ -13,12 +13,10 @@
 
 </script>
 
-<div class="uk-margin-large uk-flex uk-flex-center">
-  <div class="uk-width-1-2@m">
-    <div class="uk-card uk-card-default uk-card-body uk-box-shadow-large uk-width-2xlarge">
-      <h3 class="uk-card-title uk-text-center">Edit any entry and press save</h3>
-      <ParkingForm id={params.id}/>
+<div class="uk-container uk-margin">
+  <div class="uk-child-width-expand uk-flex-center uk-flex-middle uk-text-center" uk-grid>
+    <div class="uk-width-expand@m">
+      <ParkingForm id={params.id} update = {true}/>
     </div>
   </div>
 </div>
-
