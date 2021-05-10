@@ -13,7 +13,6 @@
             message = "Error Trying to delete parking";
         }
 	}
-
 </script>
 <div class="uk-margin-large uk-flex uk-flex-center">
     <div class="uk-card uk-card-default uk-width-1-2@m uk-text-center">
@@ -49,9 +48,9 @@
         <div class="uk-card-footer">
             <p uk-margin>
                 <a href="/#/parkings/{parking._id}" class="uk-button uk-button-primary uk-button-small" uk-icon="sign-in"></a>
-                {#if user.level >0 }
-                <a href="/#/parkingedit/{parking._id}" class="uk-button uk-button-secondary uk-button-small" uk-icon="file-edit"></a>
-                <button on:click={deleteParking} class="uk-button uk-button-danger uk-button-small" uk-icon="trash"></button>
+                {#if $user.level >0 }
+                    <a href="/#/parkingedit/{parking._id}" class="uk-button uk-button-secondary uk-button-small" uk-icon="file-edit"></a>
+                    <button on:click={deleteParking} class="uk-button uk-button-danger uk-button-small" uk-icon="trash"></button>
                 {/if}
                 {#if message}
                     <div class="uk-text-left uk-text-small">
