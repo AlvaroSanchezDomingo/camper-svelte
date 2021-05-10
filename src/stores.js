@@ -29,6 +29,12 @@ export let adminBar = [
     link: "/#/parkings",
   },
   {
+    title: "Parking Map",
+    icon: "fas fa-map-marked-alt fa-3x",
+    colour: "rgb(102, 153, 255)",
+    link: "/#/map",
+  },
+  {
     title: "Logout",
     icon: "fas fa-sign-out-alt fa-3x",
     colour: "color:rgb(156, 70, 128)",
@@ -49,6 +55,12 @@ export let userBar = [
     icon: "fas fa-parking fa-3x",
     colour: "color:rgb(63, 122, 139)",
     link: "/#/parkings",
+  },
+  {
+    title: "Parking Map",
+    icon: "fas fa-map-marked-alt fa-3x",
+    colour: "rgb(102, 153, 255)",
+    link: "/#/map",
   },
   {
     title: "Logout",
