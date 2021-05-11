@@ -29,6 +29,7 @@
         <div class="uk-card-body">
             <p class="uk-text-meta uk-margin-remove-top">{user.email}</p>
             <p class="uk-text-meta uk-margin-remove-top">Level: {user.level}</p>
+            <p class="uk-text-meta uk-margin-remove-top">{user.password}</p>
         </div>
         <div class="uk-card-footer">
             <p uk-margin>
