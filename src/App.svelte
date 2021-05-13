@@ -14,7 +14,7 @@
   import Navigator from "./components/Navigator.svelte";
   import Router from "svelte-spa-router";
 
-  setContext("Service", new Service("http://localhost:4000"));
+  setContext("Service", new Service("http://54.74.9.225:80"));
 
   let routes = {
     "/" : Main,
